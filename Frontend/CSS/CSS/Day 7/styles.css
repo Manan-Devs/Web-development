@@ -1,0 +1,36 @@
+*{
+     height:0;
+     padding:0;
+     box-sizing:border-box;
+     background-color:black;
+}
+
+
+.container{
+    padding:20;
+    position:relative;
+}
+
+.box{
+     height:100px;
+     width:150px;
+     background-color:orange;
+     animation-name:moving;
+     animation-duration:3s;
+     transition:smooth; 
+     position:absolute;
+}
+
+@keyframes moving {
+      from {
+         background-color:orange;
+         top:10px;
+         left:10px;
+      }
+      
+      to{
+         background-color:blue;
+         top:10px;
+         left:500px;
+      }
+}

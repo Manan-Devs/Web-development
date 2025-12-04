@@ -1,0 +1,1 @@
+console.log(sumResult1,sumResult2);
