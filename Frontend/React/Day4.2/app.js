@@ -1,7 +1,7 @@
 
 
 let count = 0;
-
+// creating element
 const para = document.createElement('p');
 
 para.textContent = `Counter: ${count}`;
