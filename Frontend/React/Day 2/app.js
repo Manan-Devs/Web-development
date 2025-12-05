@@ -11,7 +11,7 @@
 //  console.log(element);
  
 //  const element2 = (<div>
-//  <h1>Hell</h1>
+//  <h1>Hello</h1>
 //  <h2>hi</h2>
 //  </div>);
 
@@ -72,8 +72,8 @@
 //          <h1>Hello, Coder Army {name} </h1>
 //     );
 // }   
-    // text/element : Javascript ka expression aap iske andar likh sakte hain
-    // Number,string , true , false, array , null , undefined ,array, object 
+    // text/element : Javascript ka expression aap iske andar likh sakhain
+    // Number,string , true , false, array , null te , undefined ,array, object 
 
     // Number, string , array 
     // true false , null , undefined (render honge lekin kuch dikhayi nahi dega);

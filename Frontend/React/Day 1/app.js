@@ -89,7 +89,7 @@ const ReactDOM = {
                 
          }
 
-          root.append(element);
+          root.append(element)
              
        }
 }
