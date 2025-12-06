@@ -8,7 +8,7 @@ function App() {
 
     // const [name,setName] = useState("");
 
-    const [count,setCount] = useState(30);
+    const [count,setCount] = useState(30)
 
         useEffect(()=> {
            async function GithubProfile() {
