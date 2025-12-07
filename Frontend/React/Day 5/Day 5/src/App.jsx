@@ -11,7 +11,7 @@ function App() {
     const [count,setCount] = useState(30)
 
         useEffect(()=> {
-           async function GithubProfile() {
+       async function GithubProfile() {
 
        const response = await fetch(`https://api.github.com/users?per_page=${count}`);
        const data = await response.json(); 
