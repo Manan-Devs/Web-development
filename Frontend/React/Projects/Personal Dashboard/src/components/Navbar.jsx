@@ -5,12 +5,8 @@ function Navbar() {
     return ( 
         <nav className="navbar">
             <div className="nav-container">
-                 <h1>My Dashboard</h1>
-            <div className="search-container">
-               <input type="search" placeholder="Search" className="search-content"/>
-               <i className="material-symbols-outlined search-icon"></i>
-            </div>
-               
+                <h1>My Dashboard</h1>
+               <input type="search" placeholder="Search" className="search-content" style={{height:'18px', width: '150px', fontSize:'16px', backgroundColor:'white', border:'none'}} />
             </div>
         </nav>
     )

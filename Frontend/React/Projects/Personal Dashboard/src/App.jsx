@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar";
-import DashboardGrid from "./components/DashboardGrid";
+// import DashboardGrid from "./components/DashboardGrid";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <DashboardGrid />
+      {/* <DashboardGrid /> */}
     </div>
   );
 }
