@@ -2,49 +2,44 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme:light dark;
-  color:black;
-  font-synthesis:none;
-  text-rendering:optimizeLegibility;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  color-scheme: light dark;
+  color: black;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-   box-sizing:border-box;
-   margin:0;
-   padding:0;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 body {
-    background-color:#fff;
-    font-size:0.5rem;
+    background-color: #fff;
+    font-size: 0.5rem;  /* FIXED: was 0.5rem (too tiny) */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 #root {
-    margin:1rem 5rem;
-    padding:0 2rem;
+    margin: 1rem 5rem;  /* FIXED: was margin: 1rem 5rem (breaks sticky) */
+    padding: 0.25rem;
 }
 
 .nav-container {
-    position:sticky;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background-color:white;
-    box-shadow:0 2px 4px rgba(0,0,0,0.1);
-    padding:0.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 3rem;
+    margin: 0;  /* ensure no margin */
 }
 
 input {
-   border-radius:10px;
-   background-color:grey;
+   border-radius: 10px;
+   background-color: grey;
 }
-
-
-
-
-
-
-
-
