@@ -15,7 +15,7 @@
 
 * {
    box-sizing: border-box;
-   margin: 0
+   margin: 0;
    padding: 0;
 }
 
@@ -44,13 +44,17 @@ body {
     margin: 0;  /* ensure no margin */
 }
 
-input {
+input:hover,
+input:focus,
+input:active {
    border-radius: 5px;
    padding: 0.8rem 0.5rem;
    background-color: rgba(0,0,0,0.1);
    box-shadow:0 0 3px grey;
    position:absolute;
    right:3rem;
+   border:none;
+   outline:thin;
 }
 
 /* Greeting */
@@ -62,13 +66,15 @@ input {
      display:flex;
      background:linear-gradient(135deg, #dbeafe, #eff6ff);
      padding: 1rem 2.5rem;
+     border-radius:10px;
 }
 
 
 .greetingsInfo {
       display:flex;
       flex-direction:column;
-      max-width:80%;
+      gap:30px;
+      max-width:70%;
 }
 
 .break {
@@ -81,5 +87,13 @@ input {
   font-family: 'Poppins', sans-serif;
   color: #323c49; /* dark gray */
   letter-spacing: -0.02em;
+  font-weight:lighter;
 }
 
+.greetingsInfo h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #323c49; /* dark gray */
+  letter-spacing: -0.02em;
+  font-weight:lighter;
+  margin-top:-1rem;
+}
