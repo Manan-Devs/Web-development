@@ -44,7 +44,6 @@ body {
     margin: 0;  /* ensure no margin */
 }
 
-input:hover,
 input:focus,
 input:active {
    border-radius: 5px;
@@ -57,6 +56,17 @@ input:active {
    outline:thin;
 }
 
+input:hover {
+   border-radius: 5px;
+   padding: 0.8rem 0.5rem;
+   background-color: rgba(0,0,0,0.1);
+   box-shadow:0 0 3px grey;
+   position:absolute;
+   right:3rem;
+   border:none;
+   outline:thin;
+   transition: 1s smooth ease-in-out;
+}
 /* Greeting */
 
 .greetingsCont {
@@ -64,17 +74,18 @@ input:active {
      /* height:px; */
      width:100%;
      display:flex;
-     background:linear-gradient(135deg, #dbeafe, #eff6ff);
+     background:linear-gradient(135deg, #b4bac3, #eff6ff);
      padding: 1rem 2.5rem;
      border-radius:10px;
+     gap:80px;
 }
 
 
 .greetingsInfo {
       display:flex;
       flex-direction:column;
-      gap:30px;
-      max-width:70%;
+      gap:25px;
+      max-width:80%;
 }
 
 .break {
@@ -96,4 +107,10 @@ input:active {
   letter-spacing: -0.02em;
   font-weight:lighter;
   margin-top:-1rem;
+}
+
+.greetingsCont img {
+    height:200px;
+    border-radius:10px;
+    width:auto;
 }
