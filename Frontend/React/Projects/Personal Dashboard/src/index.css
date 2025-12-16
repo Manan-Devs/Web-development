@@ -44,8 +44,8 @@ body {
     margin: 0;  /* ensure no margin */
 }
 
-input:focus,
-input:active {
+
+input {
    border-radius: 5px;
    padding: 0.8rem 0.5rem;
    background-color: rgba(0,0,0,0.1);
@@ -56,17 +56,6 @@ input:active {
    outline:thin;
 }
 
-input:hover {
-   border-radius: 5px;
-   padding: 0.8rem 0.5rem;
-   background-color: rgba(0,0,0,0.1);
-   box-shadow:0 0 3px grey;
-   position:absolute;
-   right:3rem;
-   border:none;
-   outline:thin;
-   transition: 1s smooth ease-in-out;
-}
 /* Greeting */
 
 .greetingsCont {
@@ -113,4 +102,21 @@ input:hover {
     height:200px;
     border-radius:10px;
     width:auto;
+}
+
+
+
+/* Dashboard  */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.Todo-Cont {
+    height:100px;
+    width:100px;
 }
