@@ -46,14 +46,12 @@ body {
 
 
 input {
-   border-radius: 5px;
+   border-radius:5px;
    padding: 0.8rem 0.5rem;
-   background-color: rgba(0,0,0,0.1);
+   color:#fff;
    box-shadow:0 0 3px grey;
-   position:absolute;
-   right:3rem;
    border:none;
-   outline:thin;
+   outline:none;
 }
 
 /* Greeting */
@@ -111,12 +109,40 @@ input {
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color:whitesmoke;
   gap: 20px;
   padding: 20px;
+  margin-top:1rem;
 }
-
 
 .Todo-Cont {
-    height:100px;
-    width:100px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    gap:30px;
 }
+
+.Todo-Cont h1 {
+   font-family:'Poppins',sans-serif;
+}
+
+.Add_New_Task {
+   display:flex;
+   position: relative;
+} 
+
+.addTask {
+   border-radius:5px;
+   padding: 0.8rem 0.5rem;
+   height:25px;
+   color:black;
+   background-color:white;
+   box-shadow:0 0 3px grey;
+   border:none;
+   outline:none;
+}
+
+/* .Add_New_Task button {
+      position:absolute;
+      right:px;
+} */
