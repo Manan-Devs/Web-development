@@ -22,15 +22,13 @@ function TodoWidget() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-
-        <button onClick={addTask}>Add</button>
+        <button onClick={addTask}> Add </button>
       </div>
-
       <div className="Tasks_Container">
         {tasks.map((task, index) => (
           <div className="Task_Container" key={index}>
             <input type="checkbox" />
-            <span>{task}</span>
+             <span>{task}</span>
           </div>
         ))}
       </div>

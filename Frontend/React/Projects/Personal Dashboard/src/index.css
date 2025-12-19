@@ -48,7 +48,7 @@ body {
 input {
    border-radius:5px;
    padding: 0.8rem 0.5rem;
-   color:#fff;
+   color:black;
    box-shadow:0 0 3px grey;
    border:none;
    outline:none;
@@ -107,19 +107,24 @@ input {
 /* Dashboard  */
 
 .dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
   background-color:whitesmoke;
   gap: 20px;
   padding: 20px;
   margin-top:1rem;
+  position:relative;
 }
+
 
 .Todo-Cont {
     display:flex;
     flex-direction:column;
-    justify-content:space-evenly;
     gap:30px;
+    background-color:#fff;
+    padding:20px;
+    border-radius:10px;
 }
 
 .Todo-Cont h1 {
@@ -128,21 +133,103 @@ input {
 
 .Add_New_Task {
    display:flex;
-   position: relative;
+   gap:20px;
+   position:relative;
 } 
 
-.addTask {
-   border-radius:5px;
-   padding: 0.8rem 0.5rem;
-   height:25px;
-   color:black;
-   background-color:white;
-   box-shadow:0 0 3px grey;
+.Add_New_Task button {
+   background-color:blue;
    border:none;
-   outline:none;
+   color:white;
+   border-radius:10px;
+   cursor:pointer;
+   padding:5px 10px 5px 10px;
+   text-align:center;
+   position:absolute;
+   left:138px;
 }
 
 /* .Add_New_Task button {
-      position:absolute;
-      right:px;
-} */
+    position:absolute;
+    ;
+  } */
+
+.Add_New_Task input {
+     height:25px;
+     background-color:#eff6ff;
+     color:black;
+}
+
+
+.Tasks_Container {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    background-color:#eff6ff;
+}
+
+.Task_Container {
+    display:flex;
+    align-items: center;
+    gap:30px;
+}
+
+.Task_Container input[type="checkbox"] {
+  accent-color: #4c7df0;
+}
+
+
+.Task_Container span {
+    font-size:large;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Timer  */
+
+.Timer__container {
+     display:flex;
+     flex-direction:column;
+     gap:15px;
+     background-color:white;
+     border-radius:30px;
+     padding:20px;
+}
+
+.Timer {
+   height:150px;
+   width:150px;
+   border-radius:100px;
+   margin-left:3rem;
+   border-style:double;
+   display:flex;
+   justify-content:center;
+   align-items: center;
+   font-size:large;
+}
+
+.Timer__container h1 {
+   font-family:'Poppins',sans-serif;
+}
+
+
+.controls {
+   display:flex;
+   justify-content:center;
+   gap:60px;
+   margin-top:1rem;
+}
+
+.controls button {
+   padding:10px 10px 10px 10px;
+   background-color:blue;
+   border:none;
+   cursor:pointer;
+   border-radius:5px;
+}
+
+.controls button:hover {
+    background-color:lightcyan;
+    outline:thin;
+    color:black;
+    transition:0.3s all ease-in-out;
+}
