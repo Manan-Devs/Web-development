@@ -44,6 +44,10 @@ body {
     margin: 0;  /* ensure no margin */
 }
 
+h1 {
+    font-family:'Poppins',sans-serif;
+}
+
 
 input {
    border-radius:5px;
@@ -82,7 +86,6 @@ input {
 .greetingsInfo h1 {
   font-size: clamp(2rem, 5vw, 2rem);
   line-height:1.2;
-  font-family: 'Poppins', sans-serif;
   color: #323c49; /* dark gray */
   letter-spacing: -0.02em;
   font-weight:lighter;
@@ -109,7 +112,7 @@ input {
 .dashboard-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr 1fr;
+  grid-template-rows:0.5fr 0.7fr;
   background-color:whitesmoke;
   gap: 20px;
   padding: 20px;
@@ -127,9 +130,6 @@ input {
     border-radius:10px;
 }
 
-.Todo-Cont h1 {
-   font-family:'Poppins',sans-serif;
-}
 
 .Add_New_Task {
    display:flex;
@@ -181,7 +181,6 @@ input {
 
 .Task_Container span {
     font-size:large;
-    font-family:'Poppins',sans-serif;
 }
 
 /* Timer  */
@@ -200,15 +199,11 @@ input {
    width:150px;
    border-radius:100px;
    margin-left:3rem;
-   border-style:double;
+   border-style:dashed;
    display:flex;
    justify-content:center;
    align-items: center;
    font-size:large;
-}
-
-.Timer__container h1 {
-   font-family:'Poppins',sans-serif;
 }
 
 
@@ -231,5 +226,34 @@ input {
     background-color:lightcyan;
     outline:thin;
     color:black;
-    transition:0.3s all ease-in-out;
+    transition:0.5s all ease-in-out;
+}
+
+
+
+/* Weather Container */
+
+
+.weather-container {
+    background-color:white;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    border-radius:10px;
+}
+
+.weatherData {
+    font-size:large;
+    display:flex;
+    align-items: center;
+    gap:25px;
+}
+
+.weather-container h1 {
+    margin-bottom:-0.5rem;
+}
+
+.weatherData img {
+   height:2rem;
 }
