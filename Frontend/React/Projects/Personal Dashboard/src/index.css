@@ -111,8 +111,8 @@ input {
 
 .dashboard-grid {
   display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:0.5fr 0.7fr;
+  grid-template-columns:0.2fr 0.2fr;
+  grid-template-rows:0.5fr 0.2fr;
   background-color:whitesmoke;
   gap: 20px;
   padding: 20px;
@@ -165,7 +165,7 @@ input {
     display:flex;
     flex-direction:column;
     gap:20px;
-    background-color:#eff6ff;
+    background-color:#defcfc;
 }
 
 .Task_Container {
@@ -175,7 +175,7 @@ input {
 }
 
 .Task_Container input[type="checkbox"] {
-  accent-color: #4c7df0;
+  accent-color:#4c7df0;
 }
 
 
@@ -189,7 +189,7 @@ input {
      display:flex;
      flex-direction:column;
      gap:15px;
-     background-color:white;
+     background-color:rgb(228, 228, 228);
      border-radius:30px;
      padding:20px;
 }
@@ -257,3 +257,28 @@ input {
 .weatherData img {
    height:2rem;
 }
+
+/* Notes Container */
+
+
+.Notes__Container  {
+    display: flex;
+    flex-direction:column;
+    gap:30px;
+    padding:20px;
+    background-color:white;
+    border-radius:20px;
+}
+
+textarea {
+   background-color:rgb(228, 228, 118);
+   vertical-align: top;
+   border:none;
+   outline:none;
+   border-radius:10px;
+   color:black;
+   padding:20px;
+   text-wrap:wrap;
+   vertical-align:top;
+}
+
