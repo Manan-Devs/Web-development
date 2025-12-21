@@ -3,13 +3,13 @@ import { useState } from "react";
 function TodoWidget() {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
-
   const addTask = () => {
     if (input.trim() === "") return;
 
     setTasks([...tasks, input]);
     setInput("");
   };
+
 
   return (
     <div className="Todo-Cont">
@@ -27,7 +27,7 @@ function TodoWidget() {
       <div className="Tasks_Container">
         {tasks.map((task, index) => (
           <div className="Task_Container" key={index}>
-            <input type="checkbox" />
+            <input onClick={}  type="checkbox" />
              <span>{task}</span>
           </div>
         ))}
