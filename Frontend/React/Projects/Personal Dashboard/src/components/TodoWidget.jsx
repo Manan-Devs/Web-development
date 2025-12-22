@@ -1,13 +1,22 @@
-import { useState } from "react";
+
+
+import { useState , useEffect} from "react";
 
 function TodoWidget() {
+  const [seconds, setSeconds] = useState(0);
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
+
   const addTask = () => {
     if (input.trim() === "") return;
 
     setTasks([...tasks, input]);
     setInput("");
+  };
+  
+  const deleteTask = (indexToDelete) => {
+  setTasks(tasks.filter((_, index) => 
+     index !== indexToDelete));
   };
 
 
@@ -20,6 +29,11 @@ function TodoWidget() {
           type="text"
           placeholder="Add a new task"
           value={input}
+          onKeyDown={(e) => {
+               if(e.key === "Enter") {
+                  addTask();
+               }
+          }}
           onChange={(e) => setInput(e.target.value)}
         />
         <button onClick={addTask}> Add </button>
@@ -27,7 +41,7 @@ function TodoWidget() {
       <div className="Tasks_Container">
         {tasks.map((task, index) => (
           <div className="Task_Container" key={index}>
-            <input onClick={}  type="checkbox" />
+            <input onClick={() => deleteTask(index)} type="checkbox" />
              <span>{task}</span>
           </div>
         ))}
