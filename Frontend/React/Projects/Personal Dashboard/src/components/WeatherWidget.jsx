@@ -4,7 +4,7 @@ import Sun from '../assets/Sun.png';
 
 function WeatherWidget() {
       return ( 
-          <div className="weather-container">
+          <div className="weather-container"
                 <h1>Weather</h1>
             
             <div className="weatherData">
