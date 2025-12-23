@@ -1,9 +1,6 @@
-
-
-import { useState , useEffect} from "react";
+import { useState} from "react";
 
 function TodoWidget() {
-  const [seconds, setSeconds] = useState(0);
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
 
