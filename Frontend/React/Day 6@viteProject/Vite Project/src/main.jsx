@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import Counter from './Counter.jsx'
-import List from './List.jsx'
-import Clock from './Clock.jsx'
+// import App from './App.jsx'
+// import Counter from './Counter.jsx'
+// import List from './List.jsx'
+import Clock from './Clocks.jsx'
 
 // console.log(<h1>Hello Coder</h1>);
 
