@@ -22,11 +22,10 @@
 body {
     background-color: #fff;
     font-size: 0.5rem;  /* FIXED: was 0.5rem (too tiny) */
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
     display:flex;
     align-items: center;
+    justify-content: center;
 }
 
 #root {
@@ -78,7 +77,6 @@ input {
       display:flex;
       flex-direction:column;
       gap:28px;
-      max-width:80%;
 }
 
 .break {
@@ -285,3 +283,32 @@ textarea {
    vertical-align:top;
 }
 
+/* Habits */
+
+.Habits_Container {
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    background-color:#fff;
+    padding:20px;
+    border-radius:10px;
+}
+
+.Habit_Item {
+    display:flex;
+    gap:20px;
+    
+}
+
+/* Calendar  */
+
+.Calendar_Container {
+     display:flex;
+     gap:20px;
+     flex-direction:column;
+     background-color:#fff;
+     border-radius:10px;
+     padding:20px;
+     justify-content:center;
+     align-items:center;
+}
