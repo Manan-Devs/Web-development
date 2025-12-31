@@ -20,7 +20,7 @@ function HabitsTracker() {
   return (
     <div className="Habits_Container">
       <h1>Habits</h1>
-
+      <input className="Add_Habit" type="text" />
       {habits.map((habit) => (
         <div key={habit.id} className="Habit_Item">
           <input

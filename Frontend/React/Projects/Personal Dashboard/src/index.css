@@ -297,7 +297,10 @@ textarea {
 .Habit_Item {
     display:flex;
     gap:20px;
-    
+}
+
+.Add_Habit {
+     background-color:white;
 }
 
 /* Calendar  */
