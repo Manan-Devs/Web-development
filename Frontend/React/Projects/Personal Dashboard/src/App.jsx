@@ -3,7 +3,7 @@ import Greeting from "./components/Greeting";
 import DashboardGrid from "./components/DashboardGrid";
 
 function App() {
-  return 
+  return (
     <div className="app">
       <Navbar />
       <Greeting />
