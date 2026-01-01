@@ -31,7 +31,7 @@ function App() {
         <div>
            <button onClick={handleStart}>Start</button>
            <button onClick={handleReset}>Reset</button>
-           <button onClick={handleStop}>Stop</button>
+           <button onClick={handleStop}>Stop</button
         </div>
       </>
        
