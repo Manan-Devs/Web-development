@@ -5,7 +5,7 @@ function App() {
      
     const [time , setTime] = useState(0);
     const intervalIdRef = useRef(null);
-          function handleStart() {
+      function handleStart() {
           if(intervalIdRef.current !== null) {
                return;
           }
@@ -31,7 +31,7 @@ function App() {
         <div>
            <button onClick={handleStart}>Start</button>
            <button onClick={handleReset}>Reset</button>
-           <button onClick={handleStop}>Stop</button
+           <button onClick={handleStop}>Stop</button>
         </div>
       </>
        
