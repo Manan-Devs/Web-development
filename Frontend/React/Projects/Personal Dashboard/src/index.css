@@ -186,7 +186,7 @@ input {
 
 /* Timer  */
 
-.Timer__container {
+.Timer_Container {
      display:flex;
      flex-direction:column;
      gap:15px;
@@ -204,7 +204,8 @@ input {
    display:flex;
    justify-content:center;
    align-items: center;
-   font-size:large;
+   font-size:xx-large;
+   animation:pulse 2s infinite;
 }
 
 
@@ -278,40 +279,141 @@ textarea {
    outline:none;
    border-radius:10px;
    color:black;
-   padding:20px;
+   padding:30px;
    text-wrap:wrap;
-   vertical-align:top;
+   height:100px;
 }
 
 /* Habits */
 
 .Habits_Container {
-    display:flex;
-    flex-direction:column;
-    gap:30px;
-    background-color:#fff;
-    padding:20px;
-    border-radius:10px;
+  background: #77882552;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
 }
 
-.Habit_Item {
-    display:flex;
-    gap:20px;
+.Habits_Container h1 {
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
 }
 
 .Add_Habit {
-     background-color:white;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
+.Add_Habit input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color:white;
+}
+
+.Add_Habit button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #4f8cff;
+  color: white;
+}
+
+.Habit_Item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f5f7ff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.Habit_Item input[type="text"] {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 16px;
+}
+
+.Habit_Item input.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.Habit_Item .delete {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+
+.delete-effect {
+  opacity: 0;
+  transform: translateX(20px);
+}
 /* Calendar  */
 
-.Calendar_Container {
-     display:flex;
-     gap:20px;
-     flex-direction:column;
-     background-color:#fff;
-     border-radius:10px;
-     padding:20px;
-     justify-content:center;
-     align-items:center;
+.CalendarMini {
+  background: #ffffff20;
+  backdrop-filter: blur(10px);
+  padding: 12px;
+  border-radius: 14px;
+  position:relative;
+  grid-column-end: span 2;
 }
+
+.CalendarMini h1 {
+   text-align:center;
+   margin-bottom:30px;
+}
+
+.CalendarMini h4 {
+  text-align: center;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.mini-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.mini-day,
+.mini-empty {
+  height: 26px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.mini-day {
+  background: #f5f7ff;
+}
+
+.mini-today {
+  background: #4f8cff;
+  color: white;
+  font-weight: bold;
+}
+
+

@@ -1,42 +1,81 @@
 import { useState } from "react";
 
 function HabitsTracker() {
-  const [habits, setHabits] = useState([
-    { id: 1, name: "Drink Water", done: false },
-    { id: 2, name: "Exercise", done: false },
-    { id: 3, name: "Read Book", done: false }
-  ]);
+  const [habits, setHabits] = useState([]);
+  const [input, setInput] = useState("");
 
+  // Add Habit (same as addTodo)
+  const addHabit = () => {
+    if (input.trim() === "") return;
+
+    setHabits([
+      ...habits,
+      {
+        id: Date.now(),
+        text: input,
+        completed: false
+      }
+    ]);
+
+    setInput("");
+  };
+
+  // Toggle Habit (same as toggleTodo)
   const toggleHabit = (id) => {
     setHabits(
       habits.map((habit) =>
         habit.id === id
-          ? { ...habit, done: !habit.done }
+          ? { ...habit, completed: !habit.completed }
           : habit
       )
     );
   };
 
+  // Delete Habit (same as deleteTodo)
+  const deleteHabit = (id) => {
+    setHabits(habits.filter((habit) => habit.id !== id));
+  };
+
   return (
     <div className="Habits_Container">
       <h1>Habits</h1>
-      <input className="Add_Habit" type="text" />
-      {habits.map((habit) => (
-        <div key={habit.id} className="Habit_Item">
-          <input
-            type="checkbox"
-            checked={habit.done}
-            onChange={() => toggleHabit(habit.id)}
-          />
-          <span
-            style={{
-              textDecoration: habit.done ? "line-through" : "none"
-            }}
-          >
-            {habit.name}
-          </span>
-        </div>
-      ))}
+
+      <div className="Add_Habit">
+        <input
+          type="text"
+          placeholder="Add a habit..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && addHabit()}
+        />
+        <button onClick={addHabit}>Add</button>
+      </div>
+
+      <div className="Habits_List">
+        {habits.map((habit) => (
+          <div key={habit.id} className="Habit_Item">
+            <input
+              type="checkbox"
+              checked={habit.completed}
+              onChange={() => toggleHabit(habit.id)}
+        />
+
+            <span
+              style={{
+                textDecoration: habit.completed
+                  ? "line-through"
+                  : "none"
+              }}
+            >
+              {habit.text}
+            </span>
+
+            <button onClick={() => deleteHabit(habit.id)}>
+              ❌
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
